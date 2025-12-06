@@ -2,13 +2,13 @@
 
 const input =
 document.getElementById("taskInput");
-const list = document.getElementById("tasklist");
+const list = document.getElementById("taskList");
 
 
 window.onload = () =>{
     const saved=
     JSON.parse(localStorage.getItem("tasks")) || [];
-    saved.forEach(task => showtTask(task));
+    saved.forEach(task => showTask(task));
 };
 
 
@@ -17,7 +17,7 @@ function addtask(){
     const task = input.value.trim();
     if(!task)return;
 
-    showtask(task);
+    showTask(task);
     
     const saved =
     JSON.parse(localStorage.getItem("tasks")) || [];
@@ -44,7 +44,7 @@ function showTask(task){
 
 
     function removeTask(element, tasktext){
-        element.parentelement.remove();
+        element.parentElement.remove();
     }
 
   let saved =
@@ -54,5 +54,5 @@ function showTask(task){
 
 function clearAll() {
     list.innerHTML = "";
-    localstorage.removeItem("tasks");
+    localStorage.removeItem("tasks");
 } 
