@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do App</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+     <style>
+    .bg-light { background: #e5e7eb; }
+    .round { border-radius: 12px; }
+    .shadow { box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
+    .heading { color: #4f46e5; }
+    .btn { background:#4f46e5; color:white; padding:8px 16px; border-radius:8px; }
+    .btn:hover { background:#4338ca; }
+    .in { border:1px solid #ccc; padding:8px; border-radius:8px; width:100%; }
+    .item { background:#f9fafb; border:1px solid #ddd; padding:8px; display:flex; justify-content:space-between; border-radius:8px; }
+    .delete { color:#ef4444; cursor:pointer; }
+    .delete:hover { color:#b91c1c; }
+     </style>
+
+</head>
+<body class="bg-light h-screen flex items-center justify-center">
+
+    <div class="bg-white round shadow p-6 w-96">
+    <h1 class="heading text-2xl font-bold text-center mb-4">To-Do App</h1>
+
+        <div class="flex gap-2 mb-4">
+        <input id="taskinput" class-="in" type="text" placeholder="Enter task">
+        <button class="btn" onclick="addtask()">Add</button>
+        </div>
+    <ul id="tasklist" class="space-y-2"></ul>
+
+    <button class="btn bg-red-500 hover:bg-red-600 w-full mt-4" onclick="clearAll()">
+        clearAll</button>
+    </div>
+
+    <script src="app.js"></script>
+
+    </body>
+    </html>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
