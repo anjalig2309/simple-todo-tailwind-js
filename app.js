@@ -48,9 +48,9 @@ function showTask(task){
     }
 
   let saved =
-  JSON.parse(localstorage.getItem("tasks")) || [];
+  JSON.parse(localStorage.getItem("tasks")) || [];
   saved = saved.filter(t=>t!==tasktext);
-  localstorage.setItem("tasks", JSON.stringify(saved));
+  localStorage.setItem("tasks", JSON.stringify(saved));
 
 function clearAll() {
     list.innerHTML = "";
