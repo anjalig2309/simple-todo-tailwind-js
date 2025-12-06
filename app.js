@@ -5,8 +5,8 @@ document.getElementById("taskInput");
 const list = document.getElementById("taskList");
 
 
-window.onload = () =>{
-    const saved=
+window.onload = () => {
+    const saved =
     JSON.parse(localStorage.getItem("tasks")) || [];
     saved.forEach(task => showTask(task));
 };
@@ -34,7 +34,7 @@ function addtask(){
 
 function showTask(task){
          const li = document.createElement("li");
-         li.classname = "item";
+         li.className = "item";
          li.innerHTML = ` 
          <span>${task}</span>
          <span class="delete" onclick="removeTask(this, '${task}')">❌</span>`;
@@ -45,13 +45,13 @@ function showTask(task){
 
     function removeTask(element, tasktext){
         element.parentElement.remove();
+    
+        let saved =
+        JSON.parse(localStorage.getItem("tasks")) || [];
+        saved = saved.filter(t=> t !== tasktext);
+        localStorage.setItem("tasks", JSON.stringify(saved));
     }
-
-  let saved =
-  JSON.parse(localStorage.getItem("tasks")) || [];
-  saved = saved.filter(t=>t!==tasktext);
-  localStorage.setItem("tasks", JSON.stringify(saved));
-
+    
 function clearAll() {
     list.innerHTML = "";
     localStorage.removeItem("tasks");
